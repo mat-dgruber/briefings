@@ -22,32 +22,43 @@ import { CommonModule } from '@angular/common';
         <ng-content select="[icon]"></ng-content>
       </div>
       <h3 class="text-lg font-bold mb-2 text-center">{{ title }}</h3>
-      <p 
+      <p
         class="text-soft-gray text-sm text-center leading-relaxed group-hover:text-white transition-colors"
         [innerHTML]="description"
       ></p>
-      
+
       <!-- Accessibility Strategy: Focus Indicator -->
-      <div 
-        *ngIf="selected" 
+      <div
+        *ngIf="selected"
         class="absolute top-2 right-2 w-4 h-4 bg-netflix-red rounded-full flex items-center justify-center"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 text-white" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-3 w-3 text-white"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+            clip-rule="evenodd"
+          />
         </svg>
       </div>
     </div>
   `,
-  styles: [`
-    :host {
-      display: block;
-      height: 100%;
-    }
-    :host:focus-visible > div {
-      outline: 2px solid white;
-      outline-offset: 4px;
-    }
-  `]
+  styles: [
+    `
+      :host {
+        display: block;
+        height: 100%;
+      }
+      :host:focus-visible > div {
+        outline: 2px solid white;
+        outline-offset: 4px;
+      }
+    `,
+  ],
 })
 export class ChoiceCardComponent {
   @Input() title: string = '';

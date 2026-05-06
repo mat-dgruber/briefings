@@ -18,10 +18,12 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
 
       <div class="space-y-12">
         <section>
-          <h2 class="text-sm font-bold uppercase tracking-widest text-netflix-red mb-6 text-center">Identidade Visual</h2>
+          <h2 class="text-sm font-bold uppercase tracking-widest text-netflix-red mb-6 text-center">
+            Identidade Visual
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <app-choice-card 
-              title="Marca Própria" 
+            <app-choice-card
+              title="Marca Própria"
               description="Já tenho logo, paleta de cores e guia de marca definido."
               [selected]="data.identity === 'existing'"
               (select)="update('identity', 'existing')"
@@ -29,8 +31,8 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
               <span icon>🎨</span>
             </app-choice-card>
 
-            <app-choice-card 
-              title="Criação do Zero" 
+            <app-choice-card
+              title="Criação do Zero"
               description="Ainda não tenho cores nem logo. Preciso de auxílio visual."
               [selected]="data.identity === 'new'"
               (select)="update('identity', 'new')"
@@ -41,10 +43,12 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
         </section>
 
         <section>
-          <h2 class="text-sm font-bold uppercase tracking-widest text-netflix-red mb-6 text-center">Referência de Estilo</h2>
+          <h2 class="text-sm font-bold uppercase tracking-widest text-netflix-red mb-6 text-center">
+            Referência de Estilo
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <app-choice-card 
-              title="Estilo Netflix" 
+            <app-choice-card
+              title="Estilo Netflix"
               description="Dark, premium, focado em capas grandes e navegação horizontal."
               [selected]="data.visualReference === 'netflix'"
               (select)="update('visualReference', 'netflix')"
@@ -52,8 +56,8 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
               <span icon>🍿</span>
             </app-choice-card>
 
-            <app-choice-card 
-              title="Outras Referências" 
+            <app-choice-card
+              title="Outras Referências"
               description="Gosto do estilo Netflix, mas tenho outras inspirações em mente."
               [selected]="data.visualReference === 'other'"
               (select)="update('visualReference', 'other')"
@@ -64,7 +68,10 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
 
           <!-- Conditional Textarea -->
           <div *ngIf="data.visualReference === 'other'" class="mt-8 step-fade-in">
-            <label for="visualReferenceNotes" class="block text-sm font-bold uppercase tracking-widest text-soft-gray mb-3">
+            <label
+              for="visualReferenceNotes"
+              class="block text-sm font-bold uppercase tracking-widest text-soft-gray mb-3"
+            >
               Quais são as suas referências?
             </label>
             <textarea
@@ -81,13 +88,13 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
       </div>
 
       <div class="flex justify-between items-center mt-16">
-        <button 
+        <button
           class="text-soft-gray hover:text-white transition-colors font-bold py-3 px-8"
           [routerLink]="['/']"
         >
           VOLTAR
         </button>
-        <button 
+        <button
           class="bg-white text-black hover:bg-netflix-red hover:text-white transition-all duration-300 font-bold py-3 px-12 rounded-sm disabled:opacity-50 disabled:cursor-not-allowed"
           [disabled]="!isComplete"
           [routerLink]="['/steps/tech']"
@@ -96,7 +103,7 @@ import { BriefingService, BriefingData } from '../../core/services/briefing.serv
         </button>
       </div>
     </div>
-  `
+  `,
 })
 export class IdentityComponent {
   private briefingService = inject(BriefingService);

@@ -9,26 +9,28 @@ export const routes: Routes = [
     component: StepContainerComponent,
     children: [
       { path: 'identity', component: IdentityComponent },
-      { 
-        path: 'tech', 
-        loadComponent: () => import('./features/steps/tech').then(m => m.TechComponent) 
+      {
+        path: 'tech',
+        loadComponent: () => import('./features/steps/tech').then((m) => m.TechComponent),
       },
-      { 
-        path: 'requirements', 
-        loadComponent: () => import('./features/steps/requirements').then(m => m.RequirementsComponent) 
+      {
+        path: 'requirements',
+        loadComponent: () =>
+          import('./features/steps/requirements').then((m) => m.RequirementsComponent),
       },
-      { 
-        path: 'metrics', 
-        loadComponent: () => import('./features/steps/metrics').then(m => m.MetricsComponent) 
+      {
+        path: 'metrics',
+        loadComponent: () => import('./features/steps/metrics').then((m) => m.MetricsComponent),
       },
-      { 
-        path: 'logistics', 
-        loadComponent: () => import('./features/steps/logistics').then(m => m.LogisticsComponent) 
-      }
-    ]
+      {
+        path: 'logistics',
+        loadComponent: () => import('./features/steps/logistics').then((m) => m.LogisticsComponent),
+      },
+    ],
   },
   {
     path: 'success',
-    loadComponent: () => import('./features/success/success.component').then(m => m.SuccessComponent)
-  }
+    loadComponent: () =>
+      import('./features/success/success.component').then((m) => m.SuccessComponent),
+  },
 ];

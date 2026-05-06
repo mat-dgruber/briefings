@@ -7,8 +7,14 @@ import { RouterOutlet } from '@angular/router';
   template: `
     <header class="p-6 md:px-12 flex items-center justify-between">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-netflix-red rounded-sm flex items-center justify-center font-bold text-lg">M</div>
-        <span class="text-xl font-bold tracking-tight">MATHEUS<span class="text-netflix-red">DEV</span></span>
+        <div
+          class="w-8 h-8 bg-netflix-red rounded-sm flex items-center justify-center font-bold text-lg"
+        >
+          M
+        </div>
+        <span class="text-xl font-bold tracking-tight"
+          >MATHEUS<span class="text-netflix-red">DEV</span></span
+        >
       </div>
     </header>
 
