@@ -5,24 +5,20 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   imports: [RouterOutlet],
   template: `
-    <header class="p-6 md:px-12 flex items-center justify-between">
+    <header class="p-6 md:px-12 flex items-center justify-between bg-black">
       <div class="flex items-center gap-2">
-        <div
-          class="w-8 h-8 bg-netflix-red rounded-sm flex items-center justify-center font-bold text-lg"
-        >
-          M
-        </div>
-        <span class="text-xl font-bold tracking-tight"
-          >MATHEUS<span class="text-netflix-red">DEV</span></span
+        <img src="assets/logo.svg" alt="Logo" class="w-10 h-10 rounded-lg shadow-lg" />
+        <span class="text-xl font-bold tracking-tight text-netflix-red"
+          >MATHEUS<span class="text-white">DEV</span></span
         >
       </div>
     </header>
 
-    <main class="flex-1 flex flex-col items-center justify-center p-6 md:p-12">
+    <main class="flex-1 flex flex-col bg-black">
       <router-outlet />
     </main>
 
-    <footer class="p-6 text-center text-soft-gray text-sm">
+    <footer class="p-2 md:p-6 text-center text-soft-gray text-xs w-full relative z-10">
       &copy; 2026 Matheus Dev. Todos os direitos reservados.
     </footer>
   `,
