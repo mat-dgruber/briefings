@@ -29,6 +29,11 @@ export const routes: Routes = [
     ],
   },
   {
+    path: 'proposta',
+    loadComponent: () =>
+      import('./features/proposal/proposal.component').then((m) => m.ProposalComponent),
+  },
+  {
     path: 'success',
     loadComponent: () =>
       import('./features/success/success.component').then((m) => m.SuccessComponent),
